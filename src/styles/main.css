@@ -1,0 +1,872 @@
+/* ================= ОБЩИЕ СБРОСЫ ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  background-color: #f4f5f7;
+  color: #333;
+}
+
+/* ================= ШАПКА ================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: flex-start;
+  background: linear-gradient(to right, #5a8bb8, #9da5a8);
+  border-radius: 12px;
+  padding: 4px 10px;
+  width: 100%;
+}
+
+.nav-link {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.theme-toggle {
+  background: #f0f2f5;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: #e4e6eb;
+  transform: scale(1.05);
+}
+
+/* ================= ГЛАВНАЯ: КОНТЕЙНЕР ================= */
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ================= ГЛАВНАЯ: HERO ================= */
+.hero-section {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.hero-image-container {
+  flex: 0 0 48%;
+  border-radius: 4px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px 0;
+}
+
+.hero-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #000;
+  width: 100%;
+  margin: 0;
+}
+
+.btn-blue {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 0;
+}
+
+.btn-blue:hover {
+  background-color: #0069d9;
+}
+
+.btn-blue:active {
+  transform: scale(0.98);
+}
+
+/* ================= ГЛАВНАЯ: О НАС ================= */
+.about-section {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.about-title {
+  font-size: 28px;
+  color: #a0a0a0;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.about-text {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 30px;
+  max-width: 850px;
+  text-align: center;
+}
+
+.about-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-more {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.btn-more:hover {
+  background-color: #0056b3;
+}
+
+.btn-more:active {
+  transform: scale(0.98);
+}
+
+/* ================= ГЛАВНАЯ: ПАРТНЁРЫ ================= */
+.partners-section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #eaeaea;
+}
+
+.partners-title {
+  font-size: 28px;
+  color: #a0a0a0;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.partner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+
+.partner-logo {
+  max-height: 50px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.partner-arrow {
+  font-size: 32px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.partner-arrow:hover {
+  transform: translate(3px, -3px);
+  color: #007bff;
+}
+
+.partner-description {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.partner-link {
+  color: #007bff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  align-self: flex-start;
+}
+
+.partner-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* ================= ПОДВАЛ ================= */
+.site-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #eaeaea;
+  padding-top: 60px;
+  margin-top: 80px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.footer-desc {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.footer-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.footer-links,
+.footer-contacts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #666;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  font-family: inherit;
+}
+
+.footer-links button:hover {
+  color: #007bff;
+}
+
+.footer-contacts a {
+  color: #666;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.footer-contacts a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+/* ================= СТРАНИЦА ПАРТНЁРЫ ================= */
+.page-title {
+  font-size: 32px;
+  color: #a0a0a0;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+/* ================= СТРАНИЦА О НАС ================= */
+.about-lead {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+
+.about-info-section {
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+
+.about-subtitle {
+  font-size: 26px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.about-paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.about-values-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about-values-list li {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #444;
+  position: relative;
+  padding-left: 25px;
+}
+
+.about-values-list li::before {
+  content: "•";
+  color: #007bff;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+.about-values-list strong {
+  color: #1a1a1a;
+}
+
+/* ================= СТРАНИЦА ЛЕКТОРЫ ================= */
+.filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.filter-btn.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.lecturers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.lecturer-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lecturer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.lecturer-card__photo-wrap {
+  width: 100%;
+  height: 250px;
+  background-color: #eef1f7;
+}
+
+.lecturer-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.lecturer-card__body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.lecturer-card__name {
+  font-size: 20px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.lecturer-card__meta {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.lecturer-card__disciplines {
+  font-size: 15px;
+  color: #007bff;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+.lecturer-card .btn-more {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.lecturer-card .btn-more:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* ================= СТРАНИЦА ЛЕКТОРА (ДЕТАЛИ) ================= */
+.back-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.back-btn:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.lecturer-detail {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+  align-items: flex-start;
+}
+
+.lecturer-detail__photo {
+  width: 300px;
+  height: 380px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.lecturer-detail__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.lecturer-detail__info {
+  flex-grow: 1;
+}
+
+.lecturer-detail__name {
+  font-size: 36px;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.lecturer-detail__meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 18px;
+  color: #444;
+}
+
+.lecturer-detail__meta-list strong {
+  color: #1a1a1a;
+}
+
+.lecturer-detail__content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.section-subtitle {
+  font-size: 28px;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.course-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.course-card__title {
+  font-size: 22px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.course-card__desc {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.course-card__program {
+  margin-top: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.tariff-card {
+  background: #f8f9fa;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 30px;
+  position: sticky;
+  top: 100px;
+}
+
+.tariff-card__title {
+  font-size: 22px;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.tariff-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tariff-card__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: 15px;
+  color: #444;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.tariff-card__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tariff-price {
+  font-size: 18px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.btn-outline-blue {
+  background: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline-blue:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-primary-wide {
+  width: 100%;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary-wide:hover {
+  background: #0056b3;
+}
+
+/* ================= АДАПТИВ ================= */
+@media (max-width: 900px) {
+  .lecturer-detail {
+    flex-direction: column;
+  }
+  .lecturer-detail__photo {
+    width: 100%;
+    max-width: 400px;
+  }
+  .lecturer-detail__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= ТЁМНАЯ ТЕМА ================= */
+body.dark-theme {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-theme .site-header {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .logo-text,
+body.dark-theme .header-phone,
+body.dark-theme .btn-login {
+  color: #ffffff;
+}
+
+body.dark-theme .theme-toggle {
+  background: #2d2d2d;
+  border-color: #444;
+  color: #fff;
+}
+
+body.dark-theme .page-title,
+body.dark-theme .hero-title,
+body.dark-theme .about-subtitle,
+body.dark-theme .lecturer-detail__name,
+body.dark-theme .section-subtitle,
+body.dark-theme .course-card__title,
+body.dark-theme .tariff-card__title {
+  color: #ffffff !important;
+}
+
+body.dark-theme .about-text,
+body.dark-theme .about-paragraph,
+body.dark-theme .about-lead,
+body.dark-theme .about-values-list li,
+body.dark-theme .partner-description,
+body.dark-theme .lecturer-detail__meta-list,
+body.dark-theme .course-card__desc,
+body.dark-theme .course-card__program {
+  color: #b0b0b0 !important;
+}
+
+body.dark-theme .about-values-list strong {
+  color: #ffffff;
+}
+
+body.dark-theme .lecturer-card,
+body.dark-theme .partner-card,
+body.dark-theme .course-card,
+body.dark-theme .tariff-card {
+  background-color: #1e1e1e;
+  border-color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .lecturer-card__photo-wrap,
+body.dark-theme .lecturer-detail__photo,
+body.dark-theme .hero-image-container {
+  background-color: #2d2d2d;
+}
+
+body.dark-theme .site-footer {
+  background-color: #1a1a1a;
+  border-top-color: #333;
+}
+
+body.dark-theme .footer-logo,
+body.dark-theme .footer-heading {
+  color: #ffffff;
+}
+
+body.dark-theme .footer-desc,
+body.dark-theme .footer-links button,
+body.dark-theme .footer-contacts a {
+  color: #888;
+}
+
+body.dark-theme .footer-bottom {
+  border-top-color: #333;
+}
+
+body.dark-theme .lecturer-card__name {
+  color: #ffffff !important;
+}
+
+body.dark-theme .lecturer-card__meta {
+  color: #b0b0b0 !important;
+}
+
+body.dark-theme .lecturer-card__disciplines {
+  color: #66b2ff !important;
+}
+
+body.dark-theme .lecturer-card .btn-more {
+  color: #66b2ff !important;
+  border-color: #66b2ff !important;
+}
+
+body.dark-theme .lecturer-card .btn-more:hover {
+  background-color: #66b2ff !important;
+  color: #121212 !important;
+}
+
+body.dark-theme .lecturer-detail__meta-list p {
+  color: #b0b0b0 !important;
+}
+
+body.dark-theme .lecturer-detail__meta-list strong {
+  color: #ffffff !important;
+}
+
+body.dark-theme .back-btn {
+  color: #66b2ff !important;
+}
+
+body.dark-theme .back-btn:hover {
+  color: #3b9cff !important;
+  text-decoration: underline;
+}
