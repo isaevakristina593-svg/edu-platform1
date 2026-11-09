@@ -8,6 +8,7 @@ import LecturersPage from "./pages/LecturersPage";
 import LecturerDetailPage from "./pages/LecturerDetailPage";
 import { lecturers } from "./data/data";
 import "./styles/main.css";
+import "./App.css";
 
 export default function App() {
   const [page, setPage] = useState("home");
